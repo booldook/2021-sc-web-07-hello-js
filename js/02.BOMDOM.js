@@ -55,7 +55,7 @@ universe.ourGallaxy.solarSystem.earth.asia.korea.man.name = '홍길만';
 console.log(universe.ourGallaxy.solarSystem.earth.asia.korea.man.name);
 universe.ourGallaxy.solarSystem.earth.asia.korea.man.sleep();
 
-console.log('=======================')
+console.log('======================= 여기 이하는 맛보기 ========================')
 
 console.log(window);
 console.log(window.clientInformation.appName);

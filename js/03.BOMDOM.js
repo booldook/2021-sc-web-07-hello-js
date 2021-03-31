@@ -43,3 +43,8 @@ function pomulsun2(x) {	// 리턴값이 없는 함수
 
 // console.log( pomulsun(5) );		//25
 // console.log( pomulsun2(5) );	//undefined
+
+
+function promptAlert(query) {
+	console.log( prompt(query) + '을(를) 좋아하시는군요!!' )
+}
