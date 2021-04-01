@@ -2,3 +2,5 @@
 .banner-wrapper {position: relative; overflow: hidden;}
 .banner-wrapper > .banner {position: absolute; top: 0; left: 0;}
 .pager-wrapper {margin: 1em; text-align: center;}
+.pager-wrapper .pager {color: #ccc; cursor: pointer;}
+.pager-wrapper .pager.active {color: #2896f0;}
