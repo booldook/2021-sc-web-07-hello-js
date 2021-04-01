@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>계산기</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/05.calc.css">
+</head>
+<body>
+	<div class="wrapper">
+		<h1 class="title">계산해보자</h1>
+		<h2 class="title">덧셈</h2>
+		<form name="sumForm" onsubmit="return false">
+			<input type="number" name="a"> + 
+			<input type="number" name="b"> =
+			<input type="number" name="c">
+			<button onclick="sum();">더해라</button>
+		</form>
+		<h2 class="title">뺄셈</h2>
+		<form name="subForm" onsubmit="return false">
+			<input type="number" name="a"> - 
+			<input type="number" name="b"> =
+			<input type="number" name="c">
+			<button onclick="sub();">더해라</button>
+		</form>
+	</div>
+	<script src="../js/05.calc.js"></script>
+</body>
+</html>

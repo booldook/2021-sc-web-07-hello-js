@@ -26,7 +26,7 @@
 
 	/* 
 	함수 : function, 동작(기능)을 기술하는 곳
-	
+	1. 구조 : 인자가 있는 함수, 인자가 없는 함수, 리턴값이 있는 함수, 리턴값이 없는 함수
 	*/
 
 	function f() {
@@ -41,4 +41,18 @@
 	}
 
 	g();
+
+	function h() {
+		console.log('실행됨');
+		alert('실행됨!');
+	}
+
+	h();
+
+	function i(str, n) {
+		console.log(str, n);
+		alert(str + ', ' + n);
+	}
+
+	i('인자', 5);
 </script>

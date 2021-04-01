@@ -1,0 +1,6 @@
+.wrapper {max-width: 700px; margin: auto;}
+h1.title {font-size: 1.25em; text-align: center; padding: 1em;}
+h2.title {font-size: 1.125em; padding: 1em;}
+
+input {border: 1px solid #ccc; padding: 0.875em; width: 100px;}
+button {border: 1px solid #555; padding: 1em 2em; margin-left: 1em;}
