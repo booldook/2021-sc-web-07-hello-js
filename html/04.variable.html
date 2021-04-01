@@ -47,12 +47,69 @@
 		alert('실행됨!');
 	}
 
-	h();
+	// h();
 
 	function i(str, n) {
 		console.log(str, n);
 		alert(str + ', ' + n);
 	}
 
-	i('인자', 5);
+	// console.log( i('인자', 5) );
+
+	function j(a, b) {
+		var c = a + b;
+		return c;
+	}
+
+	console.log( j(10, 20) );	// 30
+
+
+	function k(a, b, calc) {
+		if(calc === 'sum') {
+			console.log( a + b );
+		}
+		else if(calc === 'sub') {
+			console.log( a - b );
+		}
+		else {
+			console.log('저는 계산할 수가 없어요');
+		}
+	}
+
+	k(100, 200, 'sum')
+
+
+	/*
+	= 	대입연산자
+	== 	비교연산자
+	비교연산자
+	*/
+	var l = 5;
+	var m = 10;
+	l == m;		// false
+	l > m;		// false
+	l < m;		// true
+	l >= m;		// false
+	l <= m;		// true
+	l != m;		// true
+
+	var n = 5;
+	var o = '5';
+	n == o 		// true
+	n === o		// false
+
+
+	function p(n) {
+		if(n < 0) {
+			console.log('음수입니다.');
+		}
+		else if(n > 0) {
+			console.log('양수입니다.');
+		}
+		else {
+			console.log('0 입니다.');
+		}
+	}
+
+	p(10);
 </script>
