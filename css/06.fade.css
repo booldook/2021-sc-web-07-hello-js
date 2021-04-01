@@ -1,0 +1,4 @@
+.wrapper {max-width: 1200px; margin: auto;}
+.banner-wrapper {position: relative; overflow: hidden;}
+.banner-wrapper > .banner {position: absolute; top: 0; left: 0;}
+.pager-wrapper {margin: 1em; text-align: center;}
