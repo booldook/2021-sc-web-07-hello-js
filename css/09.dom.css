@@ -1,0 +1,4 @@
+body {text-align: center;}
+input, button {border: 1px solid #999; padding: 0.75em 1em; margin: 0.5em;}
+input {border: 1px solid #999; padding: 0.5em 1em; margin: 1em;}
+.wrapper {border: 3px solid #ccc; padding: 1em; max-width: 400px; margin: auto;}
