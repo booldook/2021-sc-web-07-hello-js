@@ -1,6 +1,8 @@
 // ctrl + /
 /* alt + shift + a */
-/* 
+/*
+변수, 함수(제어if, switch, 반복for, while)
+
 속성(값): attribute -> 변수(variable) 인자(parameter: param)
 기능: function  -> 객체가 가지는 함수(method)
 
