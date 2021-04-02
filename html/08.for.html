@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../css/base.css">
 	<style>
 		.wrapper {max-width: 1200px; margin: auto; text-align: center;}
-		div {text-align: center; font-size: 1.5em; line-height: 0.5em; letter-spacing: 2px;}
+		div {text-align: center; font-size: 1.5em; /* line-height: 0.5em; letter-spacing: 2px; */}
 	</style>
 </head>
 <body>
@@ -16,13 +16,28 @@
 
 	</div>
 	<script>
-		for(var i=1, star='*'; i<=20; i++) {
+		for(var i=1, star='*'; i<=1; i++) {
 			document.write('<div>'+star+'</div>');
 			star += '*';
 		}
-		for(var j=1, star='******'; j<=5; j++) {
+		for(var j=1, star='******'; j<=1; j++) {
 			document.write('<div>'+star+'</div>');
 		}
+
+		for(var i=2; i<=9; i++) {
+			for(var j=1; j<=9; j++) {
+				document.write('<div>'+i+'x'+j+'='+i*j+'</div>')
+			}
+		}
+		
+		var a = 'My';
+		var b = ' Name';
+		var c = ' is';
+		var d = ' booldook';
+		console.log(a + b + c + d);
+		// My Name is booldook
+		console.log('My' + b + ' is' + d);
+		// My Name is booldook
 	</script>
 </body>
 </html>
