@@ -5,4 +5,4 @@ h1.title {padding: 1.5em 0 1em 0; font-size: 2em; text-align: center; color:#333
 .img-wrap {border: 5px solid #ddd; margin-bottom: 1em;}
 .list-wrap {width: 101%;}
 .list-wrap > .list {float: left; width: 13.2857%; margin-right: 1%; border: 3px solid #ddd; cursor: pointer;}
-.list-wrap > .list.active {border: 3px solid #a1493a}
+.list-wrap > .list.active {border: 3px solid #75dfff;}

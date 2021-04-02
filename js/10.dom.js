@@ -11,7 +11,6 @@ document.getElementsByClassName('list-wrap');
 
 /**********************************
 Event
-*/
 // 1번
 // document.querySelector('.title').addEventListener('click', function() {
 // 	alert('Hi~');
@@ -24,3 +23,35 @@ function greeting() {
 
 // 3번
 document.querySelector('.title').addEventListener('click', greeting);
+*/
+
+/*********************
+Gallery
+
+*/
+var thumb = document.querySelectorAll('.list > img');
+var stage = document.querySelector('.img-wrap > img');
+
+function onThumbClick() {
+	stage.src = this.src;
+	for(var i=0; i<thumb.length; i++) {
+		thumb[i].parentNode.classList.remove('active');
+	}
+	this.parentNode.classList.add('active');
+}
+
+for(var i=0; i<thumb.length; i++) {
+	thumb[i].addEventListener('click', onThumbClick);
+}
+
+
+// var listWrap = document.querySelector('.list-wrap')
+// console.log(listWrap.classList);
+// console.log(listWrap.classList[0]);
+// console.log(listWrap.classList[1]);
+// console.log(listWrap.classList.length);
+// console.log(listWrap.classList.value);
+// listWrap.classList.add('active');
+// console.log(listWrap.classList);
+// listWrap.classList.remove('active');
+// console.log(listWrap.classList);
