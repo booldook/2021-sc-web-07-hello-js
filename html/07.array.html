@@ -1,24 +1,36 @@
-<script>
-	// 배열 - Array
-	var a = [];
-	a[0] = 'A';
-	a[1] = 'B';
-	a[2] = 'C';
-	a[3] = 'D';
-
-	console.log(a);
-
-	// 제어문
-	if(조건) {
-		// 조건이 참일 때
-	}
-	else {
-		 // 조건이 거짓일 때
-	}
-
-	// 반복문
-
-	// master 작업
+<html>
+	<head></head>
+	<body>
+	<script>
+		// 배열 - Array
+		var a = [];
+		a[0] = 'A';
+		a[1] = 'B';
+		a[2] = 'C';
+		a[3] = 'D';
+		console.log(a);
 	
-	// for 분기 작업
-</script>
+		/* 
+		반복문
+		1. 1 ~ 100까지 더하시오.
+		for(var i=1, sum=0; i<=10; i=i+1) {
+			sum = sum + i;
+		}
+		*/
+		for(var i=1, sum=0; i<=10; i++) {
+			sum += i;
+		}
+		console.log(sum);
+		console.log(Number.MAX_SAFE_INTEGER);
+		
+		/*
+		축약연산자
+		i = i + 1 		=> 	i++
+		i = i - 1 		=> 	i--
+		i = i + 2 		=> 	i += 2
+		i = i - 2 		=> 	i -= 2
+		sum = sum + i	=>	sum += i
+		*/
+	</script>
+	</body>
+</html>
