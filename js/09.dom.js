@@ -17,12 +17,23 @@ var appendTxt = document.getElementById('appendTxt');
 
 function make() {
 	wrapper.innerHTML = wrapper.innerHTML + '<p>'+appendTxt.value+'</p>';
-	appendTxt.value = '';
-	appendTxt.focus();
+	init();
 }
 
-function remove() {
+function removeAll() {
 	wrapper.innerHTML = '';
+	init();
+}
+
+function removeLine() {
+	// console.log( wrapper.getElementsByTagName('p').length );
+	// console.log( wrapper.getElementsByTagName('p')[1] );
+	var lastIdx = wrapper.getElementsByTagName('p').length - 1;
+	wrapper.getElementsByTagName('p')[lastIdx].remove();
+	init();
+}
+
+function init() {
 	appendTxt.value = '';
 	appendTxt.focus();
 }
