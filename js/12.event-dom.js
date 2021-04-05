@@ -24,11 +24,17 @@ document.querySelector('.wrapper').addEventListener('click', function() {
 document.querySelector('.wrapper').addEventListener('click', function() {
 	console.log( this.childNodes )
 	console.log( this.children[2].children[2] )
+	console.log( this.firstChild )	// 써먹기 힘들다.
+	console.log( this.lastChild )		// 써먹기 힘들다.
 })
 */
 
-document.querySelectorAll('.menu')[2].addEventListener('click', function(){
-	
+document.querySelectorAll('.menu')[1].addEventListener('click', function(){
+	console.log(this);
+	console.log(this.previousSibling.previousSibling);
+	console.log(this.nextSibling.nextSibling);
+	console.log(this.parentNode.children[0]);
+	console.log(this.parentNode.children[2]);
 })
 
 
