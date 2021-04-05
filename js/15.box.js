@@ -14,26 +14,25 @@ console.log(random)
 
 // console.log( Math.floor(0.829347891241 * 100) )
 // 예 0 ~ 44에서 랜덤한 정수를 구하시오.
-// 공식: Math.floor(Math.random() * 45)
+// 공식: Math.floor(Math.random() * 45) -> 구하고 싶은 정수 + 1
 
-console.log( Math.floor(Math.random() * 45) + 1 )
-console.log( Math.floor(Math.random() * 45) + 1 )
-console.log( Math.floor(Math.random() * 45) + 1 )
-console.log( Math.floor(Math.random() * 45) + 1 )
-console.log( Math.floor(Math.random() * 45) + 1 )
-console.log( Math.floor(Math.random() * 45) + 1 )
+// 0 ~ 255
+console.log( Math.floor(Math.random() * 256) )
+
+console.log( $('#cnt') )
 
 
 /************ 전역설정 *************/
 
-
 /************ 사용자 함수 *************/
 
-
 /************ 이벤트 설정 *************/
-
+$('.bt-make').on('click', onMake)
 
 /************ 이벤트 콜백 *************/
+function onMake() {
+	var cnt = $('#cnt').val()
+}
 
 
 
