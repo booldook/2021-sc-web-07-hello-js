@@ -18,10 +18,18 @@ function onAppend() {
 	// stage.innerHTML = stage.innerHTML + '<div class="box"></div>'
 
 	stage.innerHTML += '<div class="box"></div>'
+	var box = document.querySelectorAll('.box')
+	for(var i=0; i<box.length; i++) {
+		box[i].addEventListener('click', onBoxRemove)
+	}
 }
 
 function onRemove() {
-	stage.innerHTML = '';
+	stage.innerHTML = ''
+}
+
+function onBoxRemove() {
+	this.parentNode.removeChild(this);
 }
 
 

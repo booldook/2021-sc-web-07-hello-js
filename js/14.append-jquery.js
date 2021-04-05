@@ -14,10 +14,15 @@ $('.bt-remove').on('click', onRemove)
 /************ 이벤트 콜백 *************/
 function onAppend() {
 	$('.stage').append('<div class="box"></div>')
+	$('.box').on('click', onRemoveBox)
 }
 
 function onRemove() {
 	$('.stage').empty()
+}
+
+function onRemoveBox() {
+	$(this).remove()
 }
 
 
