@@ -18,7 +18,6 @@ console.log(random)
 
 // 0 ~ 255
 console.log( Math.floor(Math.random() * 256) )
-
 console.log( $('#cnt') )
 
 
@@ -28,10 +27,25 @@ console.log( $('#cnt') )
 
 /************ 이벤트 설정 *************/
 $('.bt-make').on('click', onMake)
+$('.bt-remove').on('click', onRemove)
 
 /************ 이벤트 콜백 *************/
 function onMake() {
-	var cnt = $('#cnt').val()
+	var cnt = Number($('#cnt').val())
+	var bg, r, g, b
+	for(var i=0; i<cnt; i++) {
+		r = Math.floor(Math.random() * 256)
+		g = Math.floor(Math.random() * 256)
+		b = Math.floor(Math.random() * 256)
+		bg = 'background-color: rgb('+r+', '+g+', '+b+')';
+		$('.stage').append('<div class="box" style="'+bg+'"></div>')
+		// <div class="box" style="background-color: rgb(12,3,27)"></div>
+	}
+}
+
+function onRemove() {
+	$('.stage').empty()	// 대상안의 모든요소를 버린다
+	$('.box').remove()	// 대상을 지운다
 }
 
 

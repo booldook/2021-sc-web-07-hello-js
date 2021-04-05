@@ -328,7 +328,10 @@ $('.jq').on('click', function(){
 ### 설명: 
 
 ## remove: ƒ (e)
-### 설명: 
+### 설명: 대상을 지운다.
+```js
+$('.jq').remove()
+```
 
 ## removeAttr: ƒ (e)
 ### 설명: 
@@ -427,7 +430,14 @@ $('.jq').on('click', function(){
 ### 설명: 
 
 ## val: ƒ (n)
-### 설명: 
+### 설명: form요소(input, select ...)의 값을 반환한다.
+```html
+<input type="text" id="username" value="홍길동">
+```
+```js
+var username = $('#username').val()		// 홍길동
+$('#username').val('홍길순')					// username의 value가 '홍길순'으로 바뀐다.
+```
 
 ## width: ƒ (e,t)
 ### 설명: 
