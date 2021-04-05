@@ -21,8 +21,14 @@ document.querySelector('.wrapper').addEventListener('click', function() {
 	console.log( this.childNodes[5] );
 	console.log( this.childNodes[5].childNodes[7] );
 })
+document.querySelector('.wrapper').addEventListener('click', function() {
+	console.log( this.childNodes )
+	console.log( this.children[2].children[2] )
+})
 */
 
-document.querySelectorAll('.menu')[1].addEventListener('click', function() {
+document.querySelectorAll('.menu')[2].addEventListener('click', function(){
 	
 })
+
+
