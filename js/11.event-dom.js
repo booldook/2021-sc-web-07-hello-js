@@ -1,5 +1,6 @@
 // 변수의 범위(중요!)
 var a = 10; // 전역(global)변수
+var winWidth, winHeight; // undefined
 
 function area() {
 	var a = 20; // 지역(local)변수
@@ -43,9 +44,10 @@ console.log( el2[3] );
 // Evnet Callback 안에서의 this는 이벤트 대상을 가리킨다.
 
 document.querySelector('.bt-parent').addEventListener('click', function(){
-
+	console.log(winWidth, winHeight);
 })
 
 window.addEventListener('resize', function(){
-	console.log(this.innerWidth, this.innerHeight);
+	winWidth = this.innerWidth 
+	winHeight = this.innerHeight;
 })
