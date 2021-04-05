@@ -35,6 +35,14 @@ Gallery
 var thumb = document.querySelectorAll('.list > img');
 var stage = document.querySelector('.img-wrap > img');
 
+function onThumbClick() {
+	stage.src = this.src;
+	for(var i=0; i<thumb.length; i++) {
+		thumb[i].parentNode.classList.remove('active');
+	}
+	this.parentNode.classList.add('active');
+}
+
 for(var i=0; i<thumb.length; i++) {
 	thumb[i].addEventListener('click', function() {
 		stage.src = this.src;
@@ -46,11 +54,17 @@ for(var i=0; i<thumb.length; i++) {
 }
 */
 
-$('.list > img').on('click', function(){
-	$('.img-wrap > img').attr('src', $(this).attr('src'));
-	$('.list').removeClass('active')
-	$(this).parent().addClass('active')
-})
+
+// var src = $('.img').attr('src')								// Getter
+// $('.img').attr('src', '../img/cherries.jpg')		// Setter
+
+function onThumbClick(){
+	var src = $(this).attr('src');
+	$('.img-wrap > img').attr('src', src);
+	$('.list-wrap > .list').removeClass('active');
+	$(this).parent().addClass('active');
+}
+$('.list > img').on('click', onThumbClick);
 
 
 // var listWrap = document.querySelector('.list-wrap')
