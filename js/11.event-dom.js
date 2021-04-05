@@ -1,3 +1,19 @@
+// 변수의 범위(중요!)
+var a = 10; // 전역(global)변수
+
+function area() {
+	var a = 20; // 지역(local)변수
+	console.log('area():', a) // 20
+}
+function area2() {
+	console.log('area2():', a) // 10
+}
+area();
+area2();
+console.log('root:', a) // 10
+
+
+
 // 옛날선택자 - 알고는 있되 쓰지 말자
 // document.getElementById('아이디')
 // document.getElementsByTagName('태그명')
@@ -24,7 +40,12 @@ console.log( el2[3] );
 // keyboard(keypress, keyup) 
 // form(reset, submit), 
 // window(resize, scroll)
+// Evnet Callback 안에서의 this는 이벤트 대상을 가리킨다.
 
 document.querySelector('.bt-parent').addEventListener('click', function(){
 
+})
+
+window.addEventListener('resize', function(){
+	console.log(this.innerWidth, this.innerHeight);
 })
