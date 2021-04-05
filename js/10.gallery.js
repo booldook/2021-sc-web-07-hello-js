@@ -29,20 +29,28 @@ document.querySelector('.title').addEventListener('click', greeting);
 Gallery
 
 */
+
+/*
+// Javascript
 var thumb = document.querySelectorAll('.list > img');
 var stage = document.querySelector('.img-wrap > img');
 
-function onThumbClick() {
-	stage.src = this.src;
-	for(var i=0; i<thumb.length; i++) {
-		thumb[i].parentNode.classList.remove('active');
-	}
-	this.parentNode.classList.add('active');
-}
-
 for(var i=0; i<thumb.length; i++) {
-	thumb[i].addEventListener('click', onThumbClick);
+	thumb[i].addEventListener('click', function() {
+		stage.src = this.src;
+		for(var i=0; i<thumb.length; i++) {
+			thumb[i].parentNode.classList.remove('active');
+		}
+		this.parentNode.classList.add('active');
+	});
 }
+*/
+
+$('.list > img').on('click', function(){
+	$('.img-wrap > img').attr('src', $(this).attr('src'));
+	$('.list').removeClass('active')
+	$(this).parent().addClass('active')
+})
 
 
 // var listWrap = document.querySelector('.list-wrap')
