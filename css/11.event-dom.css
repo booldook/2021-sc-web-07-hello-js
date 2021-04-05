@@ -1,0 +1,6 @@
+.wrapper {max-width: 800px; margin: auto;}
+h1.title {padding: 1em; font-size: 1.5em; text-align: center;}
+.btn-wrapper {text-align: center; margin-bottom: 1em;}
+.btn-wrapper button {padding: 0.75em 1.25em; margin: 0.5em; border: 1px solid burlywood;}
+.menu-wrapper {width: 101%;}
+.menu-wrapper > .menu {width: 24%; margin-right: 1%; float: left;}
