@@ -16,7 +16,7 @@ $('#bt-lotto').on('click', onLotto)
 
 /***************** 이벤트 콜백 *******************/
 function onLotto() {
-	var numbers = [], i, n
+	var numbers = [], n, i, color
 	// while(조건): 조건이 참일때까지 반복
 	while(numbers.length < 6) {	
 		n = Math.floor(Math.random() * 45) + 1;
@@ -27,5 +27,15 @@ function onLotto() {
 	// numbers.sort(function(a, b) { return a - b }) 오름차순
 	// numbers.sort(function(a, b) { return b - a }) 내림차순
 	numbers.sort(function(a, b) { return a - b })
-	console.log(numbers)
+	// console.log(numbers)
+	$('.display').empty()
+	for(i=0; i<6; i++) {
+		if(numbers[i] <= 10) { color = 'yellow' }
+		else if(numbers[i] <= 20) { color = 'blue' }
+		else if(numbers[i] <= 30) { color = 'red' }
+		else if(numbers[i] <= 40) { color = 'grey' }
+		else { color = 'green' }
+		// console.log(color)
+		$('.display').append('<li class="ball '+color+'">'+numbers[i]+'</li>');
+	}
 }
