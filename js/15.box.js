@@ -46,7 +46,10 @@ function onMake() {
 		// $('.stage').prepend('<div class="box" style="'+bg+'"></div>')
 		// $('<div class="box" style="'+bg+'"></div>').prependTo('.stage')
 
-		$('<div class="box" style="'+bg+'"></div>').appendTo('.stage').on('click', function(){
+		$('<div class="box" style="'+bg+'"></div>')
+		.appendTo('.stage')
+		.on('click', 
+		function(){
 			$(this).remove()
 		})
 	}
