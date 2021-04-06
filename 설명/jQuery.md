@@ -35,13 +35,18 @@
 ### 설명: 
 
 ## append: ƒ ()
-### 설명: 대상안에 html을 넣는다.
+### 설명: 대상안의 뒤에 html을 넣는다.
+### return: $(대상)
 ```js
-$('.jq').append('<div>hi</div>')
+$('대상').append('<div>hi</div>')
 ```
 
 ## appendTo: ƒ (e)
-### 설명: 
+### 설명: html을 대상안의 뒤에 넣는다.
+### return: $(html)
+```js
+$('<div>hi</div>').appendTo('대상')
+```
 
 ## attr: ƒ (e,t)
 ### 설명: 
@@ -295,10 +300,18 @@ $('.jq').on('click', function(){
 ### 설명: 
 
 ## prepend: ƒ ()
-### 설명: 
+### 설명: 대상안의 앞에 html을 넣는다.
+### return: $(대상)
+```js
+$('대상').prepend('<div>hi</div>')
+```
 
 ## prependTo: ƒ (e)
-### 설명: 
+### 설명: html을 대상안의 앞에 넣는다.
+### return: $(html)
+```js
+$('<div>hi</div>').prependTo('대상')
+```
 
 ## prev: ƒ (e,t)
 ### 설명: 
