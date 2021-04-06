@@ -26,41 +26,41 @@
 
 	/* 
 	함수 : function, 동작(기능)을 기술하는 곳
-	1. 구조 : 인자가 있는 함수, 인자가 없는 함수, 리턴값이 있는 함수, 리턴값이 없는 함수
+	1. 구조 : 인자(매개변수)가 있는 함수, 인자(매개변수)가 없는 함수, 리턴값이 있는 함수, 리턴값이 없는 함수
 	*/
 
+	// 인자x, 리턴값x
 	function f() {
 		// 할일을 적는 곳
 		console.log('f함수 실행됨');
 	}
-
 	f();
 
+	// 인자x, 리턴값x
 	var g = function() {
 		console.log('g함수 실행됨');
 	}
-
 	g();
 
+	// 인자x, 리턴값x
 	function h() {
 		console.log('실행됨');
 		alert('실행됨!');
 	}
+	h();
 
-	// h();
-
+	// 인자o, 리턴값x
 	function i(str, n) {
 		console.log(str, n);
 		alert(str + ', ' + n);
 	}
-
 	// console.log( i('인자', 5) );
 
+	// 인자o, 리턴값o
 	function j(a, b) {
 		var c = a + b;
 		return c;
 	}
-
 	console.log( j(10, 20) );	// 30
 
 

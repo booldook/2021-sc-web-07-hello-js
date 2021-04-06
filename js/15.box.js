@@ -30,6 +30,7 @@ $('.bt-make').on('click', onMake)
 $('.bt-remove').on('click', onRemove)
 
 /************ 이벤트 콜백 *************/
+// <div class="box" style="background-color: rgb(12,3,27)"></div>
 function onMake() {
 	var cnt = Number($('#cnt').val())
 	var bg, r, g, b
@@ -38,8 +39,16 @@ function onMake() {
 		g = Math.floor(Math.random() * 256)
 		b = Math.floor(Math.random() * 256)
 		bg = 'background-color: rgb('+r+', '+g+', '+b+')';
-		$('.stage').append('<div class="box" style="'+bg+'"></div>')
-		// <div class="box" style="background-color: rgb(12,3,27)"></div>
+		// var el = $('.stage').append('<div class="box" style="'+bg+'"></div>')
+		// console.log(el)
+		// var el2 = $('<div class="box" style="'+bg+'"></div>').appendTo('.stage')
+		// console.log(el2)
+		// $('.stage').prepend('<div class="box" style="'+bg+'"></div>')
+		// $('<div class="box" style="'+bg+'"></div>').prependTo('.stage')
+
+		$('<div class="box" style="'+bg+'"></div>').appendTo('.stage').on('click', function(){
+			$(this).remove()
+		})
 	}
 }
 
