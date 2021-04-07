@@ -1,2 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&family=Sunflower:wght@300&display=swap');
+/* font-family: 'Noto Serif KR', serif;
+	 font-family: 'Sunflower', sans-serif; */
+
+html, body {font-family: 'Sunflower', sans-serif; font-weight: 300;}
+
 input, button {padding: 0.75em 1.25em; border: 1px solid #6887a5;}
-input {padding: calc(0.75em - 2.5px) 1.25em;}
+button:hover {background-color: #3c5268; color: #f9f9f9;}
+input {padding: calc(0.75em - 2px) 1.25em;}
+.title {font-family: 'Noto Serif KR', serif; font-weight: 500;}
+
+.wrapper {max-width: 1200px; margin: auto;}
+h1.title {text-align: center; font-size: 2em; padding: 2em 0;}
+
+.score-form {margin-bottom: 1.5em;}
+.score-form input {width: 90px;}
+.score-form input[name='name'] {width: 120px;}
+
+.score-tb {width: 100%; text-align: center; border-top: 1px solid #ddd;}
+
+.score-tb th {border-bottom: 3px double #6887a5; padding: 0.75em 0;}
+.score-tb td {border-bottom: 1px solid #ddd; padding: 0.75em 0;}
+.score-tb button {padding: 0.25em 0.5em;}
+.score-tb button.bt-change:hover {background-color: #5c7e21;}
+.score-tb button.bt-remove:hover {background-color: #9e1313;}
