@@ -15,6 +15,9 @@ h1.title {text-align: center; font-size: 2em; padding: 2em 0;}
 .score-form {margin-bottom: 1.5em;}
 .score-form input {width: 90px;}
 .score-form input[name='name'] {width: 120px;}
+.score-form button.bt-submit {margin-left: 1em;}
+.score-form button.bt-reset {border: 1px solid #f08d4b;}
+.score-form button.bt-reset:hover {background-color: #9c592d;}
 
 .score-tb {width: 100%; text-align: center; border-top: 1px solid #ddd;}
 
