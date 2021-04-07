@@ -10,6 +10,47 @@
 	<script src="../js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+	<div class="wrapper">
+		<h1 class="title">성적관리프로그램</h1>
+		<form action="#" name="scoreForm" class="score-form">
+			<input type="text" name="name" placeholder="이름" autofocus>
+			<input type="number" name="kor" min="0" max="100" step="1" placeholder="국어">
+			<input type="number" name="eng" min="0" max="100" step="1" placeholder="영어">
+			<input type="number" name="math" min="0" max="100" step="1" placeholder="수학">
+			<button class="bt-submit">등록</button>
+		</form>
+		<table class="score-tb">
+			<thead>
+				<tr>
+					<th>번호</th>
+					<th>이름</th>
+					<th>국어</th>
+					<th>영어</th>
+					<th>수학</th>
+					<th>총점</th>
+					<th>평균</th>
+					<th>석차</th>
+					<th>관리</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>홍길동</td>
+					<td>80점</td>
+					<td>85점</td>
+					<td>90점</td>
+					<td>255점</td>
+					<td>85점</td>
+					<td>2등</td>
+					<td>
+						<button class="bt-change">수정</button>
+						<button class="bt-remove">삭제</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 	<script src="../js/17.score.js"></script>
 </body>
 </html>
