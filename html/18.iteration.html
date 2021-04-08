@@ -1,10 +1,10 @@
 <script>
 
 var users = [
-	{id: 1, name: '홍길일', age: 47, gender: 'M'},
+	{id: 1, name: '홍길일', age: 15, gender: 'M'},
 	{id: 2, name: '홍길이', age: 25, gender: 'F'},
 	{id: 3, name: '홍길삼', age: 15, gender: 'M'},
-	{id: 4, name: '홍길사', age: 45, gender: 'F'},
+	{id: 4, name: '홍길사', age: 25, gender: 'F'},
 	{id: 5, name: '홍길오', age: 42, gender: 'F'},
 	{id: 6, name: '홍길육', age: 50, gender: 'M'},
 	{id: 7, name: '홍길칠', age: 25, gender: 'F'},
@@ -52,7 +52,13 @@ var users2 = users.map(function(v, i) {
 .sort(function(a, b) { return a.id - b.id })
 console.log(rankUsers) */
 users.sort(function(a, b) { return a.age - b.age }) // 오름차순 sort
-users.forEach(function(v, i) { v.rank = i + 1 })
-// users.sort(function(a, b) { return a.id - b.id })
+users.forEach(function(v, i) {
+	if(i == 0) v.rank = 1 
+	else {
+		if(users[i-1].age === v.age) v.rank = users[i-1].rank
+		else v.rank = i + 1
+	}
+})
+users.sort(function(a, b) { return a.id - b.id })
 console.log(users)
 </script>
