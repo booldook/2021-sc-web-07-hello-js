@@ -7,7 +7,7 @@ var users = [
 	{id: 4, name: '홍길사', age: 45, gender: 'F'},
 	{id: 5, name: '홍길오', age: 42, gender: 'F'},
 	{id: 6, name: '홍길육', age: 50, gender: 'M'},
-	{id: 7, name: '홍길칠', age: 22, gender: 'F'},
+	{id: 7, name: '홍길칠', age: 25, gender: 'F'},
 ]
 
 /**************** Iteration ******************/
@@ -46,5 +46,13 @@ var users2 = users.map(function(v, i) {
 
 
 /**************** 써먹어 보자 ******************/
-
+/* var rankUsers = users
+.sort(function(a, b) { return a.age - b.age })
+.map(function(v, i) { v.rank = i + 1; return v  })
+.sort(function(a, b) { return a.id - b.id })
+console.log(rankUsers) */
+users.sort(function(a, b) { return a.age - b.age }) // 오름차순 sort
+users.forEach(function(v, i) { v.rank = i + 1 })
+// users.sort(function(a, b) { return a.id - b.id })
+console.log(users)
 </script>
