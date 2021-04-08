@@ -1,0 +1,39 @@
+<script>
+/*
+true  판정: 문자열, 0이외의 숫자 등
+false 판정: '', 0, null, undefined
+if(5<3) {
+	console.log('IF 실행')
+}
+*/
+
+/* 
+함수
+function fn() {
+	console.log('fn 실행')
+	return function() {
+		console.log('fn 안의 함수 실행')
+	}
+}
+console.log(fn)
+var fn2 = fn
+console.log(fn2()())
+
+const fn = function() {
+	console.log('fn 실행')
+	return function() {
+		console.log('fn 이 리턴한 함수 실행')
+	}
+}
+fn()()
+*/
+
+var users = [
+	{id: 1, name: '홍길일'},
+	{id: 2, name: '홍길이'},
+]
+
+var key = 'name'
+console.log(users[1].key) // error
+console.log(users[1][key])
+</script>
