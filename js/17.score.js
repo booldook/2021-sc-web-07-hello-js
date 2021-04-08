@@ -20,11 +20,16 @@ var scores = []
 
 
 /******************* 사용자 함수 *********************/
+/* 
+if(scores[i-1].total === v.total) v.rank = scores[i-1].rank
+else v.rank = i + 1 
+if(i == 0) v.rank = 1
+else v.rank = scores[i-1].total === v.total ? scores[i-1].rank : i + 1
+*/
 function rankingScore() {
-	scores.sort(function(a, b) {
-		return a.total - b.total
+	scores.sort(sortDesc('total')).forEach(function(v, i) {
+		v.rank = (i === 0) ? 1 : (scores[i-1].total === v.total) ? scores[i-1].rank : i + 1
 	})
-	console.log(scores)
 }
 
 function renderScore() {

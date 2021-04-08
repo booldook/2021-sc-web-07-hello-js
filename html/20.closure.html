@@ -23,15 +23,17 @@
 
 	function ascend(key) {
 		return function(a, b) {
-			if(key) return a[key] - b[key]
-			else return a - b
+			/* if(key) return a[key] - b[key]
+			else return a - b */
+			return key ? a[key] - b[key] : a - b
 		}
 	}
 
 	function descend(key) {
 		return function(a, b) {
-			if(key) return b[key] - a[key]
-			else return b - a
+			/* if(key) return b[key] - a[key]
+			else return b - a */
+			return key ? b[key] - a[key] : b - a
 		}
 	}
 
