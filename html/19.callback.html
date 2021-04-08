@@ -1,0 +1,14 @@
+<script>
+function sum(a, b, fn) {
+	fn(a + b)
+}
+
+sum(10, 20, function(v) {
+	console.log(v)
+})
+
+setInterval(function(){
+	console.log( Date() )
+}, 1000)
+
+</script>

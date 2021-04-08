@@ -1,0 +1,32 @@
+<script>
+
+var users = [
+	{id: 1, name: '홍길일', age: 47, gender: 'M'},
+	{id: 2, name: '홍길이', age: 25, gender: 'F'},
+	{id: 3, name: '홍길삼', age: 15, gender: 'M'},
+	{id: 4, name: '홍길사', age: 45, gender: 'F'},
+	{id: 5, name: '홍길오', age: 42, gender: 'F'},
+	{id: 6, name: '홍길육', age: 50, gender: 'M'},
+	{id: 7, name: '홍길칠', age: 22, gender: 'F'},
+]
+
+for(var i=0; i<users.length; i++) {
+	// console.log(users[i])
+}
+
+users.forEach(function(v, i) {
+	console.log(v, i)
+})
+
+
+// callback -> promise -> async/await
+/* forEach(function(v, i){
+	console.log(i+'번째 데이터는', v, '입니다.')
+})
+
+function forEach(fn) {
+	for(var i=0; i<users.length; i++) {
+		fn(users[i], i)
+	}
+} */
+</script>

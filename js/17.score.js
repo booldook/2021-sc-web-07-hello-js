@@ -35,7 +35,7 @@ function scoreRender() {
 		html += '<td>'+scores[i].avg+'점</td>'
 		html += '<td>등</td>'
 		html += '<td>'
-		html += '<button class="bt-change">수정</button>'
+		html += '<button class="bt-change">수정</button>&nbsp;'
 		html += '<button class="bt-remove">삭제</button>'
 		html += '</td>'
 		html += '</tr>'
