@@ -20,7 +20,14 @@ var scores = []
 
 
 /******************* 사용자 함수 *********************/
-function scoreRender() {
+function rankingScore() {
+	scores.sort(function(a, b) {
+		return a.total - b.total
+	})
+	console.log(scores)
+}
+
+function renderScore() {
 	// 테이블에 점수를 등록
 	var i, html
 	$('.score-tb tbody').empty()
@@ -56,6 +63,7 @@ function onScoreSubmit(f) {
 	var kor = f.kor.value.trim()
 	var eng = f.eng.value.trim()
 	var math = f.math.value.trim()
+	var createdAt = new Date().getTime()
 	
 	// 데이터 검증
 	if(name === '') {
@@ -94,15 +102,19 @@ function onScoreSubmit(f) {
 		eng: eng,
 		math: math,
 		total: total,
-		avg: avg
+		avg: avg,
+		createdAt: createdAt
 	})
-	console.log(scores)
+	// console.log(scores)
 
 	// form을 초기화
 	f.reset()
 
+	// 데이터의 순위를 가공한다
+	rankingScore()
+
 	// 데이터를 화면에 표현한다
-	scoreRender()
+	renderScore()
 
 	return false
 }

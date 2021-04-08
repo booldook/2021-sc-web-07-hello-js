@@ -1,0 +1,44 @@
+<script>
+	/* 
+	if(조건) {
+
+	}
+	조건이 	true가 되는 경우: 문자, 0이외의 숫자
+	조건이 false가 되는 경우: null, undefined, 0
+	*/
+	var arr = [3, 7, 1, 6, 4, 4, 9, 23, 9]
+	var users = [
+		{id: 1, name: '홍길일', age: 15, gender: 'M'},
+		{id: 2, name: '홍길이', age: 25, gender: 'F'},
+		{id: 3, name: '홍길삼', age: 15, gender: 'M'},
+		{id: 4, name: '홍길사', age: 25, gender: 'F'},
+		{id: 5, name: '홍길오', age: 42, gender: 'F'},
+		{id: 6, name: '홍길육', age: 50, gender: 'M'},
+		{id: 7, name: '홍길칠', age: 25, gender: 'F'},
+	]
+	console.log( users[2].name )
+	console.log( users[2]['name'] )
+
+
+
+	function ascend(key) {
+		return function(a, b) {
+			if(key) return a[key] - b[key]
+			else return a - b
+		}
+	}
+
+	function descend(key) {
+		return function(a, b) {
+			if(key) return b[key] - a[key]
+			else return b - a
+		}
+	}
+
+	arr.sort(ascend())
+	console.log(arr)
+
+	users.sort(ascend('age'))
+	console.log(users)
+	
+</script>
