@@ -10,16 +10,30 @@ var users = [
 	{id: 7, name: '홍길칠', age: 22, gender: 'F'},
 ]
 
+/**************** Iteration ******************/
 for(var i=0; i<users.length; i++) {
 	// console.log(users[i])
 }
 
 users.forEach(function(v, i) {
-	console.log(v, i)
+	// console.log(v, i)
 })
 
+/**************** filtering ******************/
+var ageOver30 = []
+for(var i=0; i<users.length; i++) {
+	// console.log(users[i])
+	if(users[i].age >= 30) ageOver30.push(users[i])
+}
+// 데이터를 순회(iteration)하면서 
+// 조건에 따라 새로운 배열에 값을 넣거나(true) 말거나(false)하는 함수
+var ageOver30 = users.filter(function(v, i) {
+	return v.age >= 30
+})
+console.log(ageOver30)
 
-// callback -> promise -> async/await
+
+// callback -> Promise -> async/await
 /* forEach(function(v, i){
 	console.log(i+'번째 데이터는', v, '입니다.')
 })
