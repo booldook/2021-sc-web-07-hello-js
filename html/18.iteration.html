@@ -30,17 +30,21 @@ for(var i=0; i<users.length; i++) {
 var ageOver30 = users.filter(function(v, i) {
 	return v.age >= 30
 })
-console.log(ageOver30)
+// console.log(ageOver30)
 
 
-// callback -> Promise -> async/await
-/* forEach(function(v, i){
-	console.log(i+'번째 데이터는', v, '입니다.')
+var arr = ['A', 'B', 'C']
+arr.forEach(function(v, i) {
+	// console.log(v, i)
 })
 
-function forEach(fn) {
-	for(var i=0; i<users.length; i++) {
-		fn(users[i], i)
-	}
-} */
+/**************** mapping ******************/
+var users2 = users.map(function(v, i) {
+	return { name: v.name, age: v.age }
+})
+// console.log(users2)
+
+
+/**************** 써먹어 보자 ******************/
+
 </script>

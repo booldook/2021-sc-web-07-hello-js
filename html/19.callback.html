@@ -1,4 +1,6 @@
 <script>
+// 앞으로 배울것들: callback -> Promise -> async/await
+
 function sum(a, b, fn) {
 	fn(a + b)
 }
@@ -11,4 +13,14 @@ setInterval(function(){
 	console.log( Date() )
 }, 1000)
 
+// 배열이 가지고 있는 forEach()는 아마도 아래와 같이 구현되어 있을 것이다.
+/* forEach(function(v, i){
+	console.log(i+'번째 데이터는', v, '입니다.')
+})
+
+function forEach(fn) {
+	for(var i=0; i<users.length; i++) {
+		fn(users[i], i)
+	}
+} */
 </script>
