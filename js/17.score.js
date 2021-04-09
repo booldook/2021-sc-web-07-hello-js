@@ -90,6 +90,9 @@ function renderScore() {
 		// console.log(html)
 		$('.score-tb tbody').prepend(html)
 	}
+	$('.score-tb tbody tr').stop().fadeOut(0, function() {
+		$(this).stop().fadeIn(1000)
+	})
 }
 
 /******************* 이벤트 등록 *********************/
